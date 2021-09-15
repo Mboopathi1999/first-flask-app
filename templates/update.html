@@ -38,7 +38,7 @@
     </center>
     <div class="container center_div">
         <div id="innerdiv">
-            <form action="/update/{{user.sno}}" method='POST' class="row g-2">
+            <form action="/update/{{user.sno}}" method='POST' class="row g-2" enctype="multipart/form-data">
                 <label for="name" class="form-label"><b>Enter Name</b></label>
                 <input type="text" class="form-control" id="name" required name="name" value="{{user.name}}" placeholder="Enter name">
                 <label for="InputEmail"><b>Email Address</b></label>
@@ -49,6 +49,9 @@
                 <input type="text" class="form-control" id="address" name="address" required value="{{user.address}}" placeholder="Enter address">
                 <label for="number" class="form-label"><b>Enter Salary</b></label>
                 <input type="number" class="form-control" id="number" name="salary" required value="{{user.salary}}" placeholder="Enter salary">
+                <label for="File">Upload the file</label>
+                <a style="text-decoration:none" href="/filedownload/{{user.sno}}">{{user.filename}}</a>
+                <input type="file" class="form-control-file" id="File" name="file">
                 <button class="btn btn-primary" type="submit">Submit form</button>
             </form>
         </div>

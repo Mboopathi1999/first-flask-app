@@ -43,6 +43,7 @@
                         <th scope="col">Contact</th>
                         <th scope="col">Address</th>
                         <th scope="col">Salary</th>
+                        <th scope="col">File name</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -54,6 +55,7 @@
                     <td>{{user.contact}}</td>
                     <td>{{user.address}}</td>
                     <td>{{user.salary}}</td>
+                    <td><a style="text-decoration:none" href="/filedownload/{{user.sno}}">{{user.filename}}</a></td>
                     <td><a href="/update/{{user.sno}}" type="button" class="btn btn-primary btn-sm mn-1">update</a></td>
                     <td><a href="/delete/{{user.sno}}" type="button" class="btn btn-danger btn-sm mn-1">delete</a></td>
                 </tr>
